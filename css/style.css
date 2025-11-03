@@ -1,0 +1,456 @@
+/*------------------------------ RESET ------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-titulo: #001948;
+    --cor-texto: #1E1E1E;
+    --cor-white: #ffffff;
+    --bg-cor-card:#F3F3F3;
+    --bg: #FAFAFA;
+    --font-txt: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-txt);
+}
+
+a{
+    text-decoration: none;
+}
+
+/*------------------------------ HEADER ------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 2rem;
+}
+
+.hd-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hd-logo img{
+    width: 20%;
+}
+
+.hd-logo-vg{
+    color: #009ADA;
+}
+
+.hd-logo-inesq{
+    color: #005BB5;
+}
+
+.hd-a{
+    display: flex;
+    gap: 1.25rem;
+}
+
+header a{
+    color: var(--cor-titulo);
+    font-weight: 700;
+}
+
+.hd-a a:hover{
+    color: #00318c;
+    scale: 1.05;
+}
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+}
+/*------------------------------ MAIN ------------------------------*/
+main{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent), url(../images/Paisagem\ de\ casa\ na\ praia.png);
+}
+
+.conheca-jm{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent), url(../images/foto\ de\ João\ Macedo.png);
+    margin-top: 2rem;
+}
+
+main, .conheca-jm{
+    min-height: 35vw;
+    background-size: 100% 100%;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.mn-txt, .conheca-jm-txt{
+    color: var(--cor-white);
+    padding: 2rem;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mn-h1{
+    font-size: 4rem;
+}
+
+.mn-p{
+    font-size: 1.5rem;
+}
+
+/*------------------------------ SOBRE NÓS ------------------------------*/
+.sobre-nos{
+    display: flex;
+    padding: 2rem;
+}
+
+.sn-txt{
+    padding: 2rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sn-txt h1{
+    font-size: 5rem;
+    color: var(--cor-titulo);
+}
+
+.sn-txt p, .conheca-jm-txt2 p{
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+}
+
+.sn-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 1rem;
+}
+.sn-img img{
+    width: 100%;
+    height: 100%;
+}
+.img1 { order: 1; }
+.img2 { order: 2; }
+.img3 { order: 3; }
+
+.row-span{
+    grid-row: span 2;
+}
+
+/*------------------------------ NOSSOS ROTEIROS ------------------------------*/
+.nossos-roteiros{
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nossos-roteiros h1{
+    color: var(--cor-titulo);
+    font-size: 5rem;
+}
+
+.nossos-roteiros h2{
+    color: var(--cor-titulo);
+}
+
+.card-row1, .card-row2, .card-row3{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.card-row2, .card-row3{
+    display: none;
+}
+
+.card{
+    background-color: var(--bg-cor-card);
+    border-radius: 1.5rem;
+    box-shadow: -4px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card-country {
+    width: 18rem;
+    height: 15rem; 
+    overflow: hidden;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.card-country img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobre toda a área mantendo proporção */
+    display: block;
+}
+
+.card-locate{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card-icon-txt{
+    display: flex;
+}
+
+.card-icon-txt h2{
+    font-size: 1.5rem;
+}
+
+.card-icon-txt p{
+    font-size: 1.20rem;
+}
+
+.card-icon-txt img{
+    max-width: 20%;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-titulo);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    max-width: 80%;
+    gap: 1rem;
+}
+
+.btn a{
+    color: var(--cor-white);
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: #002365;
+    scale: 1.035;
+}
+
+/*------------------------------ BOTÃO VEJA MAIS ------------------------------*/
+#toggle-btn{
+    display: block;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: var(--cor-titulo);
+    color: var(--cor-white);
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+#toggle-btn:hover{
+    background-color: #002365;
+    scale: 1.035;
+}
+
+/*------------------------------ CONHEÇA JOÃO MACEDO ------------------------------*/
+.conheca-jm-txt h1{
+    font-size: 4.5rem;
+}
+
+.conheca-jm-txt p{
+    font-size: 1.5rem;
+}
+
+.conheca-jm-txt2{
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.conheca-jm-txt2 h1{
+    color: var(--cor-titulo);
+    font-size: 3.5rem;
+}
+
+/*------------------------------ CONTATO ------------------------------*/
+.contato{
+    padding: 2rem;
+    background-color: var(--cor-titulo);
+    color: var(--cor-white);
+    text-align: center;
+}
+
+.contato h1{
+    font-size: 3rem;
+}
+
+/*------------------------------ FOOTER ------------------------------*/
+footer{
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+/*------------------------------ RESPONSIVIDADE ------------------------------*/
+
+/* Tablets e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+    main, .conheca-jm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mn-txt, .conheca-jm-txt {
+        max-width: 50%;
+        width: 100%;
+        padding: 1rem ;
+    }
+    .mn-txt h1, .conheca-jm-txt h1{
+        font-size: 2.5rem;
+    }
+    .mn-txt p, .conheca-jm-txt p, .sn-txt p, .conheca-jm-txt2 p {
+        font-size: 1.25rem;
+    }
+    .sobre-nos {
+        flex-direction: column; 
+    }
+    .sn-txt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .sn-txt h1, .conheca-jm-txt2 h1, .contato h1, .nossos-roteiros h1 {
+        font-size: 3rem;
+    }
+    .sn-img {
+        display: flex;
+        padding: 1rem, 0rem;
+        justify-content: space-between;
+    }
+    .sn-img img{
+        max-width: 20rem;
+        max-height: 15rem;
+    }
+    .img1 { order: 2; }  
+    .img2 { order: 3; }  
+    .img3 { order: 1; }  
+    .card-country{
+        width: 22rem;
+    }
+    
+}
+
+/* Celulares e telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    .hd-logo-vg, .hd-logo-inesq{
+        font-size: 1rem;
+    }
+    .hd-a {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main, .conheca-jm {
+        padding: 3rem;
+    }
+    .mn-txt, .conheca-jm-txt {
+        max-width: 40%;
+        padding: 1rem 0;
+    }
+    .mn-txt h1, .conheca-jm-txt h1{
+        font-size: 2.25rem;
+    }
+    .mn-txt p, .conheca-jm-txt p, .sn-txt p, .conheca-jm-txt2 p {
+        font-size: 1rem;
+    }
+    .sn-txt p, .conheca-jm-txt2 p {
+        font-size: 1.15rem;
+    }
+    .sn-txt h1, .conheca-jm-txt2 h1, .nossos-roteiros h1 {
+        font-size: 3rem;
+    }
+    .contato h1{
+        font-size: 2rem;
+    }
+    .card-country{
+        width: 18rem;
+        height: 16rem;
+    }
+    .card-txt h2{
+        font-size:1.65rem;
+    }
+}
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .hamburger {
+        display: block;
+        color: var(--cor-titulo);
+    }
+    .hd-a {
+        display: none;
+        flex-direction: column;
+        align-items: end;
+        background-color:var(--bg);
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        padding: 0.8rem;
+        border-radius: 7px;
+    }
+    .hd-a.active {
+        display: flex;
+    }
+    main, .conheca-jm {
+        padding: 3rem;
+    }
+    .mn-txt{
+        max-width: 50%;
+
+    }
+    .conheca-jm-txt{
+        max-width: 40%;
+    }
+    .mn-txt h1, .conheca-jm-txt h1{
+        font-size: 1.75rem;
+    }
+    .mn-txt p, .conheca-jm-txt p {
+        font-size: 0.75rem;
+    }
+    .sn-txt p, .conheca-jm-txt2 p{
+        font-size: 1rem;
+    }
+    .sn-txt h1, .conheca-jm-txt2 h1, .nossos-roteiros h1 {
+        font-size: 2.5rem;
+    }
+    .sn-img img{
+        max-width: 10rem;
+        max-height: 8rem;
+    }
+    .card-country{
+        width: 20rem;
+        height: 12rem;
+    }
+    .contato h1{
+        font-size: 1.75rem;
+    }
+    footer{
+        font-size: 0.75rem;
+    }
+
+}
