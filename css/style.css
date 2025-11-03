@@ -306,15 +306,12 @@ footer{
 
 /* Tablets e telas médias (até 1024px) */
 @media (max-width: 1024px) {
-    main, .conheca-jm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    
     .mn-txt, .conheca-jm-txt {
         max-width: 50%;
         width: 100%;
         padding: 1rem ;
+
     }
     .mn-txt h1, .conheca-jm-txt h1{
         font-size: 2.5rem;
@@ -398,6 +395,7 @@ footer{
 }
 /* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
+    
     .hamburger {
         display: block;
         color: var(--cor-titulo);
@@ -416,15 +414,14 @@ footer{
     .hd-a.active {
         display: flex;
     }
-    main, .conheca-jm {
-        padding: 3rem;
-    }
     .mn-txt{
         max-width: 50%;
-
     }
     .conheca-jm-txt{
         max-width: 40%;
+    }
+    main, .conheca-jm {
+        padding: 3rem;
     }
     .mn-txt h1, .conheca-jm-txt h1{
         font-size: 1.75rem;
@@ -439,7 +436,7 @@ footer{
         font-size: 2.5rem;
     }
     .sn-img img{
-        max-width: 10rem;
+        max-width: 40%;
         max-height: 8rem;
     }
     .card-country{
@@ -453,4 +450,30 @@ footer{
         font-size: 0.75rem;
     }
 
+}
+@media (max-width: 420px) {
+    .mn-txt h1, .conheca-jm-txt h1{
+        font-size: 1.25rem;
+    }
+    .mn-txt p, .conheca-jm-txt p {
+        font-size: 0.75rem;
+    }
+    .sn-img img{
+        max-width: 10rem;
+        max-height: 3rem;
+    }
+    .nossos-roteiros{
+        padding: 2rem;
+    }
+    .nossos-roteiros h1{
+        text-align: center;
+    }
+    .card-country{
+        align-items: center;
+        width: 18rem;
+        height: 16rem;
+    }
+    .contato h1{
+        font-size: 1.45rem;
+    }
 }
