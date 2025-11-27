@@ -1,14 +1,8 @@
-name: Deploy via FTP
-
-on:
-  push:
-    branches:
-      - main
-
+name: Deploy via ftp
+on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
 
@@ -18,7 +12,6 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-        localDir: "."               
-        remoteDir: "public_html"    
+        localDir: "dist"
+        remoteDir: "public_html"
         forceSsl: false
-        options: ""
